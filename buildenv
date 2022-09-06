@@ -43,3 +43,17 @@ export ZOPEN_TARBALL_DEPS="curl gzip make"
 #
 export ZOPEN_GIT_URL="git@github.com:ZOSOpenTools/zotsampleport.git"
 export ZOPEN_GIT_DEPS="git make"
+
+zopen_check_results()
+{
+#!/bin/sh
+#
+# Really simple check - make sure output log has the right line
+#
+dir="$1"
+pfx="$2"
+chk="$1/$2_check.log"
+
+grep 'All tests passed' "${chk}"
+}
+
