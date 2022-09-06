@@ -7,18 +7,6 @@
 # are also available for reading.
 # These examples are also used as a testbed for build.sh itself
 #
-if ! [ -f ./buildenv ]; then
-	echo "Need to source from the buildenv directory" >&2
-	return 0
-fi
-
-#
-# The ZOPEN_ROOT must be specified and should be set to "${PWD}"
-# The ZOPEN_ROOT _will_ become optional. It currently is required but
-# will become optional once build.sh source's the environment directly
-#
-export ZOPEN_ROOT="${PWD}"
-
 #
 # The ZOPEN_TYPE is required. This indicates whether the Open-Source 
 # package contents are stored in a 'git' format or a 'tarball' format.
