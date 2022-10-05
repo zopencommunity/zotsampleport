@@ -1,4 +1,7 @@
-#
+# Set up environment variables for general build tool to operate
+# This buildenv is a sample. It describes the minimal environment
+# variables required to set up a port environment.
+
 # The ZOPEN_TYPE is required. This indicates whether the Open-Source 
 # package contents are stored in a 'git' format or a 'tarball' format.
 # At some point, other formats (perhaps pax) may be supported
