@@ -1,13 +1,7 @@
-#!/bin/sh
-#
 # Set up environment variables for general build tool to operate
 # This buildenv is a sample. It describes the minimal environment
 # variables required to set up a port environment.
-# Alternate environment configurations of the name setenv_<variant>.sh
-# are also available for reading.
-# These examples are also used as a testbed for build.sh itself
-#
-#
+
 # The ZOPEN_TYPE is required. This indicates whether the Open-Source 
 # package contents are stored in a 'git' format or a 'tarball' format.
 # At some point, other formats (perhaps pax) may be supported
@@ -44,16 +38,31 @@ export ZOPEN_TARBALL_DEPS="curl gzip make"
 export ZOPEN_GIT_URL="git@github.com:ZOSOpenTools/zotsampleport.git"
 export ZOPEN_GIT_DEPS="git make"
 
+
 zopen_check_results()
 {
-#!/bin/sh
-#
-# Really simple check - make sure output log has the right line
-#
-dir="$1"
-pfx="$2"
-chk="$1/$2_check.log"
+  dir="$1"
+  pfx="$2"
+  chk="$1/$2_check.log"
 
-grep 'All tests passed' "${chk}"
+  success=$(grep -c "All tests passed" ${chk})
+  totalTests=1
+  failures=$((totalTests-success))
+  cat <<ZZ
+actualFailures:$failures
+totalTests:$totalTests
+expectedFailures:0
+ZZ
 }
 
+zopen_append_to_env()
+{
+  # Optional: Add additional environment variables to .env besides PATH, LIBPATH, MANPATH, PROJECT_ROOT
+  echo "export ZOT=\${PWD}"
+}
+
+zopen_post_install()
+{
+  # Optional: Post processing of install path
+  echo "In Post Install - $1"
+}
