@@ -28,7 +28,7 @@ fi
 # Test #1 - validate that basic build works
 if [[ ${TS} =~ " 1 " ]]; then
 	echo "Test 1"
-	rm -rf zotsample-1.0 ${HOME}/zot/prod/zotsample-1.0
+	rm -rf zotsample-1.1 ${HOME}/zot/prod/zotsample-1.1
 
 	if ! build.sh ; then 
 		echo "Basic build of sample failed" >&2
@@ -39,7 +39,7 @@ fi
 # Test #2 - validate that basic build works (verbose)
 if [[ ${TS} =~ " 2 " ]]; then
 	echo "Test 2"
-	rm -rf zotsample-1.0 ${HOME}/zot/prod/zotsample-1.0
+	rm -rf zotsample-1.1 ${HOME}/zot/prod/zotsample-1.1
 
 	if ! build.sh -v ; then 
 		echo "Basic build of sample failed" >&2
@@ -50,7 +50,7 @@ fi
 # Test #3 - provide an alternate location to install into
 if [[ ${TS} =~ " 3 " ]]; then
 	echo "Test 3"
-	rm -rf zotsample-1.0 ${HOME}/zot/prod/zotsample-1.0
+	rm -rf zotsample-1.1 ${HOME}/zot/prod/zotsample-1.1
 
 	if ( export PORT_INSTALL_DIR="/tmp/zotsample" && ! build.sh ) ; then
 		echo "Build and install into /tmp/zotsample failed" >&2
@@ -74,7 +74,7 @@ if [[ ${TS} =~ " 4 " ]]; then
 	export CXXFLAGS='-O2 -+ -Wc,lp64'
 	export LDFLAGS='-Wl,lp64'
 
-	rm -rf zotsample-1.0 ${HOME}/zot/prod/zotsample-1.0
+	rm -rf zotsample-1.1 ${HOME}/zot/prod/zotsample-1.1
 	if ! build.sh -v ; then 
 		echo "Changed flags build of sample failed" >&2
 		exit 4
