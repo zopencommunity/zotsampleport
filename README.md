@@ -11,3 +11,19 @@ begin to work on the port as well.
 
 To get started with the ZOSOpenTools initiative in general, 
 read [ZOSOpenTools docs)(https://zosopentools.github.io/meta)
+
+# modifying port
+
+## checklist
+
+* make sure you have git clone [meta]()
+* This build uses binary tarballs.  Use the `bin/gentarball` script to make tarballs.
+    
+
+```
+$ cd zotsampleport
+$ ./bin/gentarball `pwd`/tarballs zotsample-1.1
+```
+
+
+
