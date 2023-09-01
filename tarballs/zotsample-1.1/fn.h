@@ -1,7 +1,7 @@
-#ifdef __cplusplus
+//#ifdef __cplusplus
 extern "C" {
-#endif
+//#endif
 int fn(int argc, char** argv);
-#ifdef __cplusplus
+//#ifdef __cplusplus
 }
-#endif
+//#endif
