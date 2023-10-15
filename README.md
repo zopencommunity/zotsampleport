@@ -14,10 +14,19 @@ read [ZOSOpenTools docs)(https://zosopentools.github.io/meta)
 
 # modifying port
 
+Note that if you make a change to port, you _must_ ensure it does not break _metaport_
+which uses zotsampleport as part of it's 'zopen build' testing.
+To do so:
+- push your code into a zotsampleport BRANCH on github.com
+- `git clone git@github.com:ZOSOpenTools/zotsampleport.git`
+- `cd metaport`
+- `export ZOPEN_ZOT_SAMPLEPORT_BRANCH=<your branch>`
+- `zopen build`
+- Validate that the `zopen_check_build` step still works and that your branch was used
+
 ## checklist
 
-* make sure you have git clone [meta]()
-* This build uses binary tarballs.  Use the `bin/gentarball` script to make tarballs.
+* This build uses binary tarballs.  Use the `bin/gentarball` script if you need to modify the tarballs
     
 
 ```
