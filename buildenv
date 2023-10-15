@@ -25,6 +25,7 @@ fi
 if [ -z "${ZOPEN_STABLE_URL}" ]; then
   export ZOPEN_STABLE_URL="https://github.com/ZOSOpenTools/zotsampleport/raw/main/tarballs/zotsample-1.1.tar.gz"
 fi
+
 if [ -z "${ZOPEN_STABLE_DEPS}" ]; then
   export ZOPEN_STABLE_DEPS="make"
 fi
