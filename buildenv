@@ -67,5 +67,5 @@ zopen_append_to_env()
 zopen_post_install()
 {
   # Optional: Post processing of install path
-  echo "In Post Install - $1"
+  echo "In Post Install: $1"
 }
