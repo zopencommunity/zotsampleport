@@ -5,4 +5,6 @@ tarballs/zotsample-1.1/installdir
 zotsample-1.0/
 zotsample-1.1/
 log/
+log.STABLE/
+log.DEV/
 install/
