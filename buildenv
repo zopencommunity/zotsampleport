@@ -30,6 +30,18 @@ if [ -z "${ZOPEN_STABLE_DEPS}" ]; then
   export ZOPEN_STABLE_DEPS="make unzip"
 fi
 
+if [ -z "${ZOPEN_DEV_URL}" ]; then
+  export ZOPEN_DEV_URL="https://github.com/ZOSOpenTools/zotsample.git"
+fi
+
+if [ -z "${ZOPEN_DEV_BRANCH}" ]; then
+  export ZOPEN_DEV_BRANCH="dev"
+fi
+
+if [ -z "${ZOPEN_DEV_DEPS}" ]; then
+  export ZOPEN_DEV_DEPS="make comp_clang"
+fi
+
 #
 # zopen_check_results _must_ be specified and it needs to print out 3 lines:
 # actualFailures:<number>
@@ -55,13 +67,12 @@ ZZ
 }
 
 #
-# zopen_check_version _must_ be specified, although we specify a warning if it is not. 
-# To enable us to test this path, we do not specify it here
+# zopen_get_version _must_ be specified.
 #
-#zopen_check_version()
-#{
-#  echo "1.1"
-#}
+zopen_get_version()
+{
+  echo "1.1"
+}
 
 zopen_append_to_env()
 {
