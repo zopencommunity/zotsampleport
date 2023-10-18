@@ -2,8 +2,7 @@
 zotsample
 tarballs/zotsample-1.0/installdir
 tarballs/zotsample-1.1/installdir
-zotsample-1.0/
-zotsample-1.1/
+zotsample-*/
 log/
 log.STABLE/
 log.DEV/
