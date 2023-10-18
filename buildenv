@@ -55,13 +55,12 @@ ZZ
 }
 
 #
-# zopen_check_version _must_ be specified, although we specify a warning if it is not. 
-# To enable us to test this path, we do not specify it here
+# zopen_get_version _must_ be specified.
 #
-#zopen_check_version()
-#{
-#  echo "1.1"
-#}
+zopen_get_version()
+{
+  echo "1.1"
+}
 
 zopen_append_to_env()
 {
