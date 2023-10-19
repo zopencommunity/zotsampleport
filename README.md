@@ -12,7 +12,7 @@ begin to work on the port as well.
 To get started with the ZOSOpenTools initiative in general, 
 read [ZOSOpenTools docs](https://zosopentools.github.io/meta)
 
-# modifying port
+# modifying zotsampleport
 
 Note that if you make a change to port, you _must_ ensure it does not break _metaport_
 which uses zotsampleport as part of it's 'zopen build' testing.
@@ -23,16 +23,3 @@ To do so:
 - `export ZOPEN_ZOT_SAMPLEPORT_BRANCH=<your branch>`
 - `zopen build`
 - Validate that the `zopen_check_build` step still works and that your branch was used
-
-## checklist
-
-* This build uses binary tarballs.  Use the `bin/gentarball` script if you need to modify the tarballs
-    
-
-```
-$ cd zotsampleport
-$ ./bin/gentarball `pwd`/tarballs zotsample-1.1
-```
-
-
-
