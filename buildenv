@@ -27,7 +27,7 @@ if [ -z "${ZOPEN_STABLE_URL}" ]; then
 fi
 
 if [ -z "${ZOPEN_STABLE_DEPS}" ]; then
-  export ZOPEN_STABLE_DEPS="make unzip"
+  export ZOPEN_STABLE_DEPS="make comp_clang"
 fi
 
 if [ -z "${ZOPEN_DEV_URL}" ]; then
