@@ -10,7 +10,7 @@ as much as possible. This will make it easier for others to understand as they
 begin to work on the port as well. 
 
 To get started with the ZOSOpenTools initiative in general, 
-read [ZOSOpenTools docs)(https://zosopentools.github.io/meta)
+read [ZOSOpenTools docs](https://zosopentools.github.io/meta)
 
 # modifying port
 
