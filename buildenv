@@ -2,6 +2,7 @@
 # This buildenv is a sample. It describes the minimal environment
 # variables required to set up a port environment.
 
+export ZOPEN_CATEGORIES="utilities"
 # The ZOPEN_BUILD_LINE is required. This indicates whether the Open-Source 
 # package contents are stored in a 'dev' format or a 'stable' format.
 # All environment variables will be set up so they can use the overridden 
