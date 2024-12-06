@@ -28,7 +28,7 @@ if [ -z "${ZOPEN_STABLE_URL}" ]; then
 fi
 
 if [ -z "${ZOPEN_STABLE_DEPS}" ]; then
-  export ZOPEN_STABLE_DEPS="make comp_clang"
+  export ZOPEN_STABLE_DEPS="make check_clang"
 fi
 
 if [ -z "${ZOPEN_DEV_URL}" ]; then
@@ -40,7 +40,7 @@ if [ -z "${ZOPEN_DEV_BRANCH}" ]; then
 fi
 
 if [ -z "${ZOPEN_DEV_DEPS}" ]; then
-  export ZOPEN_DEV_DEPS="make comp_clang"
+  export ZOPEN_DEV_DEPS="make check_clang"
 fi
 
 #
